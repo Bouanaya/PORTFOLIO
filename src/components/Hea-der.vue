@@ -11,36 +11,37 @@
             <div class="flex space-x-32">
                 <div class="flex items-center ">
                     <ul class="flex space-x-6 text-primary-200 ">
-                        <li @click="$emit('scrollto', 'Home')"
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
-                            <router-link to="/" active-class="active">Home</router-link>
+                        <li class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/" active-class="active"
+                                @click="$emit('scrollto', 'Home')">Home</router-link>
                         </li>
-                        <li @click=" $emit('scrollto', 'About')"
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                        <li class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
 
-                            <router-link active-class="active" to="/About">
+                            <router-link active-class="active" to="/About" @click=" $emit('scrollto', 'About')">
                                 About
                             </router-link>
                         </li>
-                        <li @click="$emit('scrollto', 'Skills')"
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
-                            <router-link to="/Skills" active-class="active">Skills</router-link>
+                        <li class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/Skills" active-class="active"
+                                @click="$emit('scrollto', 'Skills')">Skills</router-link>
 
 
                         </li>
-                        <li @click="$emit('scrollto', 'Service')"
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
-                            <router-link to="/Service" active-class="active">Service</router-link>
+                        <li class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/Service" active-class="active"
+                                @click="$emit('scrollto', 'Service')">Service</router-link>
 
                         </li>
                         <li @click="$emit('scrollto', 'Portfolio')"
                             class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
-                            <router-link to="/PortFolio" active-class="active">PortFolio</router-link>
+                            <router-link to="/PortFolio" active-class="active"
+                                @click="$emit('scrollto', 'Portfolio')">PortFolio</router-link>
 
                         </li>
                         <li @click="$emit('scrollto', 'Contact')"
                             class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
-                            <router-link to="/Contact" active-class="active">Contact</router-link>
+                            <router-link to="/Contact" active-class="active"
+                                @click="$emit('scrollto', 'Contact')">Contact</router-link>
 
                         </li>
 

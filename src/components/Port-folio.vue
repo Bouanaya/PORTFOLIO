@@ -21,8 +21,8 @@
 
                         </div>
 
-                        <a :href="slide.link" class="flex mt-6">
-                            <Boutton label="Show" icon="pi pi-eye" outlined iconPos="right" class="w-1/2 " />
+                        <a :href="slide.link" class="flex mt-8">
+                            <Boutton label="Show" icon="pi pi-link" outlined iconPos="right" class="px-8" />
                         </a>
 
                     </div>
