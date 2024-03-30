@@ -1,5 +1,5 @@
 <template>
-    <section class="container h-screen w-full py-16">
+  
         <div class="w-full h-[25%] flex flex-col justify-center items-center space-y-2">
             <h1 class="text-5xl bg-gradient-to-r from-emerald-500 via-green-400 to-fuchsia-600
                         bg-clip-text text-transparent font-sans font-bold">About Me</h1>
@@ -39,7 +39,7 @@
 
         </div>
 
-    </section>
+   
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-    <section class="container h-screen w-full py-16">
+   
         <div class="w-full h-[25%] flex flex-col justify-center items-center space-y-2">
             <h1 class="text-5xl bg-gradient-to-r from-emerald-500 via-green-400 to-fuchsia-600
                         bg-clip-text text-transparent font-sans font-bold">Skills</h1>
@@ -17,9 +17,10 @@
             <img src="../imgs/R (2).png" alt="">
             <img src="../imgs/R (1).png" alt="">
             <img src="../imgs/nuxt-logo-1CCC5F38FD-seeklogo.com.png" alt="">
+            <img src="../imgs/OIP__1_-removebg-preview.png" alt="">
 
         </div>
-    </section>
+ 
 </template>
 <style >
 canvas{

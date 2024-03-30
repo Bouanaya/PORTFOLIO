@@ -1,11 +1,25 @@
  <template>
     <div class=" bg-[#100D1C]">
-        <Header></Header>
- 
+        <HeaderHome @scrollto="goto"></HeaderHome>
 
+        <section ref="Home" class="container h-screen w-full py-16">
             <Home></Home>
+        </section>
+
+        <section ref="About" class="container h-screen w-full py-16">
             <About />
+        </section>
+
+        <section ref="Skills" class="container h-screen w-full py-16">
             <Skills></Skills>
+        </section>
+        <section ref="Service" class="container h-screen w-full py-16">
+            <Service></Service>
+        </section>
+        <section ref="Portfolio" class="container h-screen w-full py-16">
+            <Portfolio></Portfolio>
+        </section>
+
 
 
 
@@ -13,11 +27,34 @@
     </div>
 </template>
  
- <script setup>
-import Header from './components/Hea-der.vue'
+ <script >
+import HeaderHome from './components/Hea-der.vue'
 import Home from './components/Ho-me.vue'
 import About from './components/Abo-ut.vue';
 import Skills from './components/Skil-ls.vue';
+import Service from './components/Ser-vice.vue';
+import Portfolio from './components/Port-folio.vue';
+
+export default {
+    components: {
+        HeaderHome,
+        About,
+        Home,
+        Service,
+        Skills,
+        Portfolio
+
+    },
+    methods: {
+        goto(refName) {
+            const element = this.$refs[refName];
+    console.log(refName);
+            const top = element.offsetTop;
+            window.scrollTo(0, top);
+
+        },
+    },
+};
  
  </script>
  <style scoped>

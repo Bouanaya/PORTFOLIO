@@ -4,16 +4,44 @@
         <div class="container flex justify-between items-center ">
             <div class="">
 
-                <h1
-                    class="text-3xl  bg-gradient-to-r from-emerald-500 via-green-400 to-fuchsia-600 bg-clip-text text-transparent font-sans font-bold">
-                    SOUFIANE BOUANAYA</h1>
+                <h1 class="text-3xl bg-gradient-to-r from-emerald-500 via-green-400 to-fuchsia-600 bg-clip-text
+                text-transparent font-sans font-bold">SOUFIANE BOUANAYA</h1>
+
             </div>
             <div class="flex space-x-32">
                 <div class="flex items-center ">
                     <ul class="flex space-x-6 text-primary-200 ">
-                        <li v-for="(item, index) in Navigation" :key="index"
+                        <li @click="$emit('scrollto', 'Home')"
                             class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
-                            <button>{{ item }}</button>
+                            <router-link to="/" active-class="active">Home</router-link>
+                        </li>
+                        <li @click=" $emit('scrollto', 'About')"
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+
+                            <router-link active-class="active" to="/About">
+                                About
+                            </router-link>
+                        </li>
+                        <li @click="$emit('scrollto', 'Skills')"
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/Skills" active-class="active">Skills</router-link>
+
+
+                        </li>
+                        <li @click="$emit('scrollto', 'Service')"
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/Service" active-class="active">Service</router-link>
+
+                        </li>
+                        <li @click="$emit('scrollto', 'Portfolio')"
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/PortFolio" active-class="active">PortFolio</router-link>
+
+                        </li>
+                        <li @click="$emit('scrollto', 'Contact')"
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
+                            <router-link to="/Contact" active-class="active">Contact</router-link>
+
                         </li>
 
                     </ul>
@@ -32,13 +60,16 @@
 </template>
 
 <script setup>
-const Navigation = [
-    "Home", "About", "Skills", "Portfolio", "Contact"
-]
- 
+
+
 </script>
 <style scoped>
-.nav {
-    font-weight: 500;
+ 
+
+.active {
+    color: #86198F;
+    font-size: 20px;
+  
+
 }
 </style>
