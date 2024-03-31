@@ -15,7 +15,7 @@
                 <div class="pt-16">
                     <div class="">
                         <h1 class="text-5xl text-justify text-fuchsia-500 font-bold w-[250px]">{{ slide.name }}</h1>
-                        <p class="text-left text-lg text-emerald-400 ">{{ slide.introduction }}</p>
+                        <p class="text-left text-lg text-emerald-400 dark:text-emerald-900 ">{{ slide.introduction }}</p>
                         <div class="flex space-x-5 mt-10">
                             <img :src="imgtech" alt="" v-for="imgtech in slide.imgtechs" :key="imgtech" class="w-10 h-10">
 

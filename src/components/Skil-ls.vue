@@ -74,7 +74,8 @@ const setChartOptions = () => {
         scales: {
             x: {
                 ticks: {
-                    color: "rgb(110,231,183)"
+                    color: "rgb(134, 25, 112)"
+
                 },
                 grid: {
                     color: surfaceBorder

@@ -1,12 +1,12 @@
 <template>
-    <div class=" bg-[#100D1C]">
+    <div class=" bg-[#100D1C] dark:bg-white">
         <HeaderHome @scrollto="goto"></HeaderHome>
 
         <section ref="Home" class="container h-screen w-full py-16">
-            <Home></Home>
+            <Home @scrollto="goto"></Home>
         </section>
 
-        <section ref="About" class="container h-screen w-full py-16">
+        <section ref="About" class="container h-screen w-full py-16 relative">
             <About />
         </section>
 
@@ -22,7 +22,7 @@
         <section ref="Contact" class="container h-screen w-full py-16">
             <Contact></Contact>
         </section>
-        <section  class="h-full border-t-2 border-fuchsia-600 w-full py-10">
+        <section class="h-full border-t-2 border-fuchsia-600 w-full py-10">
             <Fotter></Fotter>
         </section>
 
@@ -44,6 +44,9 @@ import Portfolio from './components/Port-folio.vue';
 import Contact from './components/Cont-act.vue';
 import Fotter from './components/Fot-ter.vue';
 
+ 
+
+
 export default {
     components: {
         HeaderHome,
@@ -56,15 +59,18 @@ export default {
         Fotter
 
     },
+   
     methods: {
         goto(refName) {
             const element = this.$refs[refName];
             console.log(refName);
             const top = element.offsetTop;
             window.scrollTo(0, top);
+            console.log(this.Toggle);
 
         },
     },
+    
 };
 
 </script>

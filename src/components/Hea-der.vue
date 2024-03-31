@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full h-16 border-b-2 border-green-200 flex hover:border-fuchsia-400 z-50 bg-[#100D1C] duration-700 fixed">
+        class="w-full h-16 border-b-2 border-green-200 flex hover:border-fuchsia-400 z-50 bg-[#100D1C]  duration-700 fixed">
         <div class="container flex justify-between items-center ">
             <div class="">
 
@@ -47,12 +47,15 @@
 
                     </ul>
                 </div>
-                <button class="py-1 px-2 border rounded-lg hover:bg-fuchsia-700 duration-500 ">
-                    <i class="pi pi-sun text-green-200"></i>
-                </button>
-                <button v-if="condition" class="py-1 px-2 border rounded-lg hover:bg-fuchsia-700 duration-500 ">
-                    <i class="pi pi-moon text-green-200"></i>
-                </button>
+                <div class="">
+                    <button v-if="light" @click="Darkmode"
+                        class="py-1 px-2 border rounded-lg hover:bg-fuchsia-700 duration-500 ">
+                        <i class="pi pi-sun text-green-200"></i>
+                    </button>
+                    <button v-if="Dark" class=" py-1 px-2 border rounded-lg hover:bg-fuchsia-700 duration-500" @click="Darkmode" >
+                        <i class=" pi pi-moon text-green-200"></i>
+                    </button>
+                </div>
 
             </div>
 
@@ -60,7 +63,21 @@
     </div>
 </template>
 
-<script setup>
+    <script setup>
+    import {ref} from 'vue'
+    import { useDark, useToggle } from '@vueuse/core'
+
+    const Dark = ref(true)
+    const light = ref(false)
+    const isDark =useDark()
+    const Toggle = useToggle(isDark)
+    const Darkmode =() =>{
+        Toggle()
+        Dark.value = !Dark.value ;
+        light.value = !light.value
+       
+    }
+ 
 
 
 </script>
