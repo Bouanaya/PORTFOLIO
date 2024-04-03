@@ -11,15 +11,14 @@
                 minus
                 nostrum, alias debitis
                 velit suscipit sunt aut atque vitae optio quia laudantium exercitationem .</p>
-
-            <Button label="Contatct" icon="pi pi-arrow-right" outlined iconPos="right" class="w-[20%]"
+            <Button label="Contatct" icon="pi pi-arrow-right" outlined iconPos="right" class=""
                 @click="$emit('scrollto', 'Contact')" />
 
         </div>
         <div class="flex justify-center items-center ">
 
             <img src="../imgs/WhatsApp Image 2024-03-24 at 5.09.48 PM.jpeg" alt=""
-                class=" shadow-lg  shadow-emerald-400/100 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30  w-3/4 ">
+                class=" shadow-lg  shadow-emerald-400/100 duration-500 cursor-pointer   hover:shadow-fuchsia-600/30  md:w-3/4 w-44  ">
 
 
         </div>

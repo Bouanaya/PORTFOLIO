@@ -1,7 +1,5 @@
 export default{
-
- 
-    root: ({ props }) => ({
+  root: ({ props }) => ({
         class: [
           //Size and Shape
           'w-96 rounded-md',

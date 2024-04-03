@@ -2,27 +2,27 @@
     <div class=" bg-[#100D1C] dark:bg-white">
         <HeaderHome @scrollto="goto"></HeaderHome>
 
-        <section ref="Home" class="container h-screen w-full py-16">
+        <section ref="Home" class="container md:h-screen w-full py-16">
             <Home @scrollto="goto"></Home>
         </section>
 
-        <section ref="About" class="container h-screen w-full py-16 relative">
+        <section ref="About" class="container md:h-screen w-full py-16 relative">
             <About />
         </section>
 
-        <section ref="Skills" class="container h-screen w-full py-16">
+        <section ref="Skills" class="container md:h-screen w-full py-16">
             <Skills></Skills>
         </section>
-        <section ref="Service" class="container h-screen w-full py-16">
+        <section ref="Service" class="container md:h-screen w-full py-16">
             <Service></Service>
         </section>
-        <section ref="Portfolio" class="container h-screen w-full py-16">
+        <section ref="Portfolio" class="container md:h-screen w-full py-16">
             <Portfolio></Portfolio>
         </section>
-        <section ref="Contact" class="container h-screen w-full py-16">
+        <section ref="Contact" class="container md:h-screen w-full py-16">
             <Contact></Contact>
         </section>
-        <section class="h-full border-t-2 border-fuchsia-600 w-full py-10">
+        <section class="h-full border-t-2 border-fuchsia-600 w-full py-10 mt-4">
             <Fotter></Fotter>
         </section>
 
@@ -46,6 +46,8 @@ import Fotter from './components/Fot-ter.vue';
 
  
 
+ 
+
 
 export default {
     components: {
@@ -59,6 +61,11 @@ export default {
         Fotter
 
     },
+    data() {
+        return {
+           
+        }
+    },
    
     methods: {
         goto(refName) {
@@ -66,7 +73,7 @@ export default {
             console.log(refName);
             const top = element.offsetTop;
             window.scrollTo(0, top);
-            console.log(this.Toggle);
+           
 
         },
     },

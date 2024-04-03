@@ -17,11 +17,13 @@
             <p class="text-fuchsia-800 ">My introduction</p>
         </div>
         <div class="flex justify-center  px-36 mt-7 space-x-8 ">
-            <div class="w-72  ">
+            <div class="w-72 relative  ">
                 <img src="../imgs/IMG_E2029.JPG" alt=""
-                    class=" shadow-lg  shadow-emerald-500/40 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30   ">
+                    class=" shadow-lg  shadow-emerald-500/40 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30 relative  z-10  rounded-3xl  ">
+                <div class="absolute bg-emerald-700 dark:bg-fuchsia-900 rounded-3xl w-full h-full -left-6 z-0 -bottom-6 blur-sm"></div>
+
             </div>
-            <div class="w-1/2 space-y-10">
+            <div class="md:w-1/2 space-y-10">
                 <p class="text-emerald-500/55 dark:text-emerald-950">Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Delectus iure
                     reiciendis amet nobis soluta

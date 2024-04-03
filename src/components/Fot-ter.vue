@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between px-16">
+    <div class="flex justify-between px-16 ">
         <nav>
             <h1 class="text-xl bg-gradient-to-r from-emerald-500 via-green-400 to-fuchsia-600 bg-clip-text
         text-transparent font-sans font-bold">SOUFIANE BOUANAYA</h1>
