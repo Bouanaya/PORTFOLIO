@@ -6,18 +6,29 @@
     </div>
     <Carousel>
         <Slide v-for="slide in Project" :key="slide">
-            <div class="carousel__item space-x-10 flex  h-[400px] justify-center   ">
-                <div class="w-1/2    flex justify-center items-center ">
+            <div class="carousel__item space-x-10 flex  md:h-[400px] justify-center px-10 mt-24  ">
+                <div class="md:w-1/2 w-3/4    flex justify-center md:flex-row flex-col  items-center ">
 
                     <img :src="slide.imgProject" alt="" class="rounded-2xl">
+                    <div class="md:hidden flex my-10 space-x-2  ">
+                        <img :src="imgtech" alt="" class="w-8 h-8 " v-for="imgtech in slide.imgtechs" :key="imgtech">
+                    </div>
+                    <a :href="slide.link" class="flex mt-4 md:hidden ">
+                        <Boutton label="Show" icon="pi pi-link" outlined iconPos="right" class="px-8" />
+                    </a>
 
                 </div>
-                <div class="pt-16">
+                <div class="pt-16 md:flex hidden">
                     <div class="">
                         <h1 class="text-5xl text-justify text-fuchsia-500 font-bold w-[250px]">{{ slide.name }}</h1>
-                        <p class="text-left text-lg text-emerald-400 dark:text-emerald-900 ">{{ slide.introduction }}</p>
+                        <p class="text-left text-lg text-emerald-400 dark:text-emerald-900 ">{{ slide.introduction }}
+                        </p>
                         <div class="flex space-x-5 mt-10">
-                            <img :src="imgtech" alt="" v-for="imgtech in slide.imgtechs" :key="imgtech" class="w-10 h-10">
+                            <img :src="imgtech" alt="" v-for="imgtech in slide.imgtechs" :key="imgtech"
+                                class="w-10 h-10">
+                            <a :href="slide.link" class=" mt-8 md:hidden flex justify-center items-start  ">
+                                <Boutton label="Show" icon="pi pi-link" outlined iconPos="right" class="px-8" />
+                            </a>
 
                         </div>
 
@@ -26,13 +37,16 @@
                         </a>
 
                     </div>
+
+
                 </div>
+
             </div>
         </Slide>
 
         <template #addons>
             <Navigation />
-        
+
         </template>
     </Carousel>
 

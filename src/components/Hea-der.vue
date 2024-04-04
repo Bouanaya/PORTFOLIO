@@ -1,44 +1,44 @@
 <template>
     <div
         class="w-full h-16 border-b-2 border-green-200  hover:border-fuchsia-400 z-50  bg-[#100D1C]  duration-700 fixed">
-        <div class="  w-screen  relative   " v-if="ShowHe" @click.stop="Showheader">
-            <div class="absolute right-0 w-full   h-full z-50 pt-[64px]  ">
-                <div class="bg-fuchsia-200  px-1 dark:bg-green-100 ">
+        <div class="  w-screen  relative   "   @click.stop="Showheader">
+            <div class="absolute -right-[100%] duration-500  w-full  z-50  " :class="{ navbar:ShowHe}">
+                <div class="bg-[#100D1C] h-16  ">
                     <ul class="flex  w-full  text-primary-600  justify-center items-center  pt-3 ">
 
                         <li
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer border dark:border-white border-fuchsia-800  w-full py-2 flex justify-center ">
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer   border-fuchsia-800  w-full py-2 flex justify-center ">
                             <router-link to="/" active-class="active" @click="$emit('scrollto', 'Home')"><i
                                     class="pi pi-home"></i></router-link>
                         </li>
                         <li
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer border dark:border-white border-fuchsia-800 w-full py-2 flex justify-center ">
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer   border-fuchsia-800 w-full py-2 flex justify-center ">
 
                             <router-link active-class="active" to="/About" @click=" $emit('scrollto', 'About')">
                                 <i class="pi pi-user"></i>
                             </router-link>
                         </li>
                         <li
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer border dark:border-white border-fuchsia-800 w-full py-2 flex justify-center ">
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer   border-fuchsia-800 w-full py-2 flex justify-center ">
                             <router-link to="/Skills" active-class="active" @click="$emit('scrollto', 'Skills')"><i
                                     class="pi pi-shopping-bag"></i></router-link>
 
 
                         </li>
                         <li
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer border dark:border-white border-fuchsia-800 w-full py-2 flex justify-center ">
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer   border-fuchsia-800 w-full py-2 flex justify-center ">
                             <router-link to="/Service" active-class="active" @click="$emit('scrollto', 'Service')"><i
                                     class="pi pi-wrench"></i></router-link>
 
                         </li>
                         <li @click="$emit('scrollto', 'Portfolio')"
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer border dark:border-white border-fuchsia-800 w-full py-2 flex justify-center ">
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer   border-fuchsia-800 w-full py-2 flex justify-center ">
                             <router-link to="/PortFolio" active-class="active"
                                 @click="$emit('scrollto', 'Portfolio')"><i class="pi pi-code"></i></router-link>
 
                         </li>
                         <li @click="$emit('scrollto', 'Contact')"
-                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer border dark:border-white border-fuchsia-800 w-full py-2 flex justify-center ">
+                            class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer   border-fuchsia-800 w-full py-2 flex justify-center ">
                             <router-link to="/Contact" active-class="active" @click="$emit('scrollto', 'Contact')"><i
                                     class=" pi pi-send"></i></router-link>
 
@@ -148,5 +148,11 @@
     font-size: 20px;
   
 
+}
+
+.navbar{
+    right: 0;
+
+    
 }
 </style>

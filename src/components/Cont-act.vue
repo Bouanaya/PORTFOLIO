@@ -4,7 +4,7 @@
                         bg-clip-text text-transparent font-sans font-bold">Contact Me</h1>
         <p class="text-fuchsia-800  ">Get in Touch</p>
     </div>
-    <div class="md:grid grid-cols-2 space-y-4 space-x-10  h-3/4 px-4  container ">
+    <div class="md:grid grid-cols-2 space-y-4 md:space-x-10  h-3/4 px-4  container ">
         <div class="md:pl-60 pt-12 space-y-8 ">
             <div class="flex  items-center space-x-4   ">
                 <WhatsApp></WhatsApp>
@@ -39,13 +39,13 @@
                     </div>
                     <span class="relative ">
                         <i class="pi pi-at absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="value2" placeholder="Email" name="to" class=" pl-10 w-full " />
+                        <InputText v-model="value3" placeholder="Email" name="to" class=" pl-10 w-full " />
                     </span>
                     <span>
-                        <InputText v-model="value3" placeholder="Subject" name="Subject" class=" w-full" />
+                        <InputText v-model="value4" placeholder="Subject" name="Subject" class=" w-full" />
                     </span>
                     <span>
-                        <Textareas v-model="value" rows="5" cols="30" placeholder="message" class="w-full" />
+                        <Textareas v-model="value5" rows="5" cols="30" placeholder="message" class="w-full" />
 
                     </span>
                     <span>
@@ -83,11 +83,20 @@ export default {
     data() {
         return {
 
-             toast : useToast()
+            toast: useToast(), value1: "", value2: "", value3: "", value4:"",value5:""
+             
 
         }
     },
     methods: {
+        removeContent(){
+            this.value1 = ""
+            this.value2 = ""
+            this.value3 = ""
+            this.value4 = ""
+            this.value5 = ""
+            
+        },
         showSuccess() {
             this.toast.add({ severity: 'success', summary: 'Success Message', detail: 'Message Content', life: 3000 });
         },
@@ -103,12 +112,17 @@ export default {
                 .then(
                     () => {
                         console.log('SUCCESS!');
+                        this.removeContent()
                         this.showSuccess()
+
                        
                     },
                     (error) => {
+                        this.removeContent()
                         this.showError()
+
                         console.log('FAILED...', error.text);
+
                     },
                 );
         },

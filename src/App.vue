@@ -2,11 +2,11 @@
     <div class=" bg-[#100D1C] dark:bg-white">
         <HeaderHome @scrollto="goto"></HeaderHome>
 
-        <section ref="Home" class="container md:h-screen w-full py-16">
+        <section ref="Home" class="md:container md:h-screen w-full  md:py-16 px-2">
             <Home @scrollto="goto"></Home>
         </section>
 
-        <section ref="About" class="container md:h-screen w-full py-16 relative">
+        <section ref="About" class="md:container px-2 h-screen w-full py-16 relative">
             <About />
         </section>
 

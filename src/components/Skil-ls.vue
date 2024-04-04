@@ -5,12 +5,17 @@
                         bg-clip-text text-transparent font-sans font-bold">Skills</h1>
         <p class="text-fuchsia-800 ">My Technical Level</p>
     </div>
-    <div class="flex justify-center items-center h-3/4 ">
-        <div class="card h-full">
+    <div class="flex justify-center items-center h-3/4 mt-24 md:mt-0">
+        <div class="card h-full md:flex hidden">
             <Chart type="bar" :data="chartData" :options="chartOptions" />
         </div>
+        <div class="md:hidden flex justify-center items-center ">
+            <div class="card flex justify-center items-center w-screen ">
+                <Chart type="pie" :data="chartData" :options="chartOptions" class="w-3/4 md:w-30rem px-2 " />
+            </div>
+        </div>
     </div>
-    <div class="w-full h-9 container  flex justify-center space-x-1 md:space-x-8">
+    <div class="w-full h-9 container  flex justify-center mt-6 md:space-x-8 space-x-2 ">
         <img src="../imgs/javascript-logo-number-symbol-text-label-transparent-png-560960-removebg-preview.png" alt="">
         <img src="../imgs/Tailwind_CSS_Logo.svg.png" alt="">
         <img src="../imgs/R (2).png" alt="">
@@ -37,7 +42,7 @@ import Chart from 'primevue/chart';
 
 onMounted(() => {
     chartData.value = setChartData();
-    chartOptions.value = setChartOptions();
+ 
 });
 
 const chartData = ref();
@@ -57,39 +62,9 @@ const setChartData = () => {
         ]
     };
 };
-const setChartOptions = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
+ 
 
-    return {
-        plugins: {
-            legend: {
-                labels: {
-                    color: "rgb(134, 25, 112)"
-                }
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: "rgb(134, 25, 112)"
-
-                },
-                grid: {
-                    color: surfaceBorder
-                }
-            },
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    color: "rgb(134, 25, 143)"
-                },
-                grid: {
-                    color: surfaceBorder
-                }
-            }
-        }
-    };
-}
-
+    
+       
+ 
 </script>

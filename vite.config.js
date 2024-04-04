@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   // server:{
   //   port:"3000",
-  //   host:"172.20.10.3"
+  //   host:"192.168.0.199"
   // },
   resolve: {
     alias: {
