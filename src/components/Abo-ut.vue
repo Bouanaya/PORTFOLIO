@@ -1,10 +1,10 @@
 <template>
     <div class=" md:h-screen h-full relative  ">
         <div class="" v-show="ShowQR">
-            <div class="absolute z-10 top-0 left-0 w-full h-full bg-emerald-500 opacity-90 blur-3xl">
+            <div class="absolute  top-0 left-0 w-full h-full bg-[#100D1C]   z-20">
             </div>
             <div @click="ShowQR = false" @wheel.prevent @touchmove.prevent @scroll.prevent
-                class="absolute flex justify-center items-center w-full h-full z-30 flex-col space-y-4">
+                class="absolute flex   justify-center items-center w-full h-full z-30 flex-col space-y-4">
                 <img src="../imgs/QRcv.png" alt="" class="w-60 h-60">
                 <h1 class="text-4xl text-emerald-500">QR</h1>
 
@@ -95,7 +95,7 @@ const Download = ()=> {
             link.setAttribute('download', 'CV.pdf');
             document.body.appendChild(link);
             link.click();
-        })
+ })
 }
 
 </script>
