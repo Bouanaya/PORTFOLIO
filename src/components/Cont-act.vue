@@ -45,7 +45,8 @@
                         <InputText v-model="value4" placeholder="Subject" name="Subject" class=" w-full" />
                     </span>
                     <span>
-                        <Textareas v-model="value5" rows="5" cols="30" placeholder="message" class="w-full" />
+                        <Textareas v-model="value5" rows="5" cols="30" name="message" placeholder="message"
+                            class="w-full" />
 
                     </span>
                     <span>

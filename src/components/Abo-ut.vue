@@ -14,14 +14,14 @@
         <div class="w-full h-[25%] flex flex-col justify-center items-center space-y-2  ">
             <h1 class="text-5xl bg-gradient-to-r from-emerald-500 via-green-400 to-fuchsia-600
                         bg-clip-text text-transparent font-sans font-bold">About Me</h1>
-            <p class="text-fuchsia-800 ">My introduction</p>
+            
         </div>
         <div class="flex  justify-center  md:px-36 mt-7 md:space-x-8 ">
             <div class="md:w-72 relative md:flex hidden  ">
                 <img src="../imgs/IMG_E2029.JPG" alt=""
-                    class=" shadow-lg  shadow-emerald-500/40 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30 relative  z-10  rounded-3xl   ">
+                    class=" shadow-lg  shadow-emerald-500/40 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30 relative  z-10    ">
                 <div
-                    class="absolute bg-emerald-700 dark:bg-fuchsia-900 rounded-3xl w-full h-full -left-6 z-0 -bottom-6 blur-sm">
+                    class="absolute bg-emerald-700 dark:bg-fuchsia-900  w-full h-full -left-2 z-0 -bottom-2 blur-sm">
                 </div>
 
             </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="flex space-x-6 px-2  ">
 
-                    <Button label="Download CV" icon="pi pi-download" outlined iconPos="right" class="md:w-[35%] "
+                    <Button label="Download CV" icon="pi pi-download" outlined iconPos="right" class=""
                         @click="Download" />
 
                     <button @click="ShowQR = true">

@@ -4,9 +4,8 @@
                         bg-clip-text text-transparent font-sans font-bold">Projects</h1>
         <p class="text-fuchsia-800 ">Most Rocent Works</p>
     </div>
-    <Carousel>
-        <Slide v-for="slide in Project" :key="slide">
-            <div class="carousel__item space-x-10 flex  md:h-[400px] justify-center px-10 mt-24  ">
+    <Carousel> <Slide v-for="slide in Project" :key="slide">
+            <div class="carousel__item space-x-10 flex  md:h-[400px] justify-center px-10 mt-14  ">
                 <div class="md:w-1/2 w-3/4    flex justify-center md:flex-row flex-col  items-center ">
 
                     <img :src="slide.imgProject" alt="" class="rounded-2xl">

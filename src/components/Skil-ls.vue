@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="w-full h-9 container  flex justify-center mt-6 md:space-x-8 space-x-2 ">
+    <div class="w-full h-9 container  flex justify-center mt-4 md:space-x-8 space-x-2 ">
         <img src="../imgs/javascript-logo-number-symbol-text-label-transparent-png-560960-removebg-preview.png" alt="">
         <img src="../imgs/Tailwind_CSS_Logo.svg.png" alt="">
         <img src="../imgs/R (2).png" alt="">

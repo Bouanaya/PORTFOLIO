@@ -81,7 +81,7 @@
                         <li @click="$emit('scrollto', 'Portfolio')"
                             class="hover:text-fuchsia-600 nav font-semibold  duration-500 cursor-pointer text-lg ">
                             <router-link to="/PortFolio" active-class="active"
-                                @click="$emit('scrollto', 'Portfolio')">PortFolio</router-link>
+                                @click="$emit('scrollto', 'Portfolio')">Projects</router-link>
 
                         </li>
                         <li @click="$emit('scrollto', 'Contact')"

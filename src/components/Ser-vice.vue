@@ -5,7 +5,7 @@
                         bg-clip-text text-transparent font-sans font-bold">Service</h1>
         <p class="text-fuchsia-800 ">What I Offre</p>
     </div>
-    <div class="md:flex  justify-center items-center space-y-3 md:space-x-10 h-3/4 md:px-2 px-10 mt-24 md:mt-0 ">
+    <div class="md:flex  justify-center items-center space-y-3 md:space-y-0 md:space-x-10 h-3/4 md:px-2 px-10 mt-24 md:mt-0 ">
         <div
             class="md:w-1/4 border-2   rounded-xl border-emerald-400 h-full hover:border-fuchsia-600 duration-500 shadow-lg hover:shadow-fuchsia-600/30  shadow-emerald-500/30   cursor-pointer px-4 py-6   ">
             <h1 class="text-3xl text-center text-emerald-300">Graphic Desing</h1>
