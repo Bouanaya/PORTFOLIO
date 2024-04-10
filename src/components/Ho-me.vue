@@ -21,7 +21,7 @@
             </div>
             <div class="flex justify-center items-center ">
 
-                <img src="../imgs/WhatsApp Image 2024-03-24 at 5.09.48 PM.jpeg" alt=""
+                <img src="/imgs/WhatsApp Image 2024-03-24 at 5.09.48 PM.jpeg" alt=""
                     class=" shadow-lg  shadow-emerald-500/30 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30  w-3/4  ">
 
 

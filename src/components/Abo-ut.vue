@@ -5,7 +5,7 @@
             </div>
             <div @click="ShowQR = false" @wheel.prevent @touchmove.prevent @scroll.prevent
                 class="absolute flex   justify-center items-center w-full h-full z-30 flex-col space-y-4">
-                <img src="../imgs/QRcv.png" alt="" class="w-60 h-60">
+                <img src="/imgs/QRcv.png" alt="" class="w-60 h-60">
                 <h1 class="text-4xl text-emerald-500">QR</h1>
 
             </div>
@@ -18,7 +18,7 @@
         </div>
         <div class="flex  justify-center  md:px-36 mt-7 md:space-x-8 ">
             <div class="md:w-72 relative md:flex hidden  ">
-                <img src="../imgs/IMG_E2029.JPG" alt=""
+                <img src="/imgs/IMG_E2029.JPG" alt=""
                     class=" shadow-lg  shadow-emerald-500/40 duration-500 cursor-pointer  hover:shadow-fuchsia-600/30 relative  z-10    ">
                 <div
                     class="absolute bg-emerald-700 dark:bg-fuchsia-900  w-full h-full -left-2 z-0 -bottom-2 blur-sm">

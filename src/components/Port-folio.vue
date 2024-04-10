@@ -4,34 +4,36 @@
                         bg-clip-text text-transparent font-sans font-bold">Projects</h1>
         <p class="text-fuchsia-800 ">Most Rocent Works</p>
     </div>
-    <Carousel> <Slide v-for="slide in Project" :key="slide">
+    <Carousel>
+        <Slide v-for="{ imgProject, index, name, link, introduction, imgtechs } in Project" :key="index">
             <div class="carousel__item space-x-10 flex  md:h-[400px] justify-center px-10 mt-14  ">
                 <div class="md:w-1/2 w-3/4    flex justify-center md:flex-row flex-col  items-center ">
 
-                    <img :src="slide.imgProject" alt="" class="rounded-2xl">
+                    <img :src="`/imgs/${imgProject}`" alt="" class="rounded-2xl">
                     <div class="md:hidden flex my-10 space-x-2  ">
-                        <img :src="imgtech" alt="" class="w-8 h-8 " v-for="imgtech in slide.imgtechs" :key="imgtech">
+                        <img :src="`/imgs/${imgtech}`" alt="" class="w-8 h-8 " v-for="imgtech in imgtechs"
+                            :key="imgtech.index">
                     </div>
-                    <a :href="slide.link" class="flex mt-4 md:hidden ">
+                    <a :href="link" class="flex mt-4 md:hidden ">
                         <Boutton label="Show" icon="pi pi-link" outlined iconPos="right" class="px-8" />
                     </a>
 
                 </div>
                 <div class="pt-16 md:flex hidden">
                     <div class="">
-                        <h1 class="text-5xl text-justify text-fuchsia-500 font-bold w-[250px]">{{ slide.name }}</h1>
-                        <p class="text-left text-lg text-emerald-400 dark:text-emerald-900 ">{{ slide.introduction }}
+                        <h1 class="text-5xl text-justify text-fuchsia-500 font-bold w-[250px]">{{ name }}</h1>
+                        <p class="text-left text-lg text-emerald-400 dark:text-emerald-900 ">{{introduction }}
                         </p>
                         <div class="flex space-x-5 mt-10">
-                            <img :src="imgtech" alt="" v-for="imgtech in slide.imgtechs" :key="imgtech"
+                            <img :src="`/imgs/${imgtech}`" alt="" v-for="imgtech in imgtechs" :key="imgtech"
                                 class="w-10 h-10">
-                            <a :href="slide.link" class=" mt-8 md:hidden flex justify-center items-start  ">
+                            <a :href="link" class=" mt-8 md:hidden flex justify-center items-start  ">
                                 <Boutton label="Show" icon="pi pi-link" outlined iconPos="right" class="px-8" />
                             </a>
 
                         </div>
 
-                        <a :href="slide.link" class="flex mt-8">
+                        <a :href="link" class="flex mt-8">
                             <Boutton label="Show" icon="pi pi-link" outlined iconPos="right" class="px-8" />
                         </a>
 
@@ -72,13 +74,13 @@ export default defineComponent({
         return {
             Project: [
                 {
-                    imgProject: "../../src/imgs/project1.png",
+                    imgProject: "project1.png",
                     name: "Dashbord",
                     imgtechs: {
-                        img1: "../../src/imgs/R (1).png",
+                        img1: "R (1).png",
 
-                        img2: "../../src/imgs/pinia.png",
-                        img3: "../../src/imgs/Tailwind_CSS_Logo.svg.png",
+                        img2: "pinia.png",
+                        img3: "Tailwind_CSS_Logo.svg.png",
 
                        
 
@@ -92,13 +94,13 @@ export default defineComponent({
 
                 },
                 {
-                    imgProject: "../../src/imgs/project2.png",
+                    imgProject: "/project2.png",
                     name: "THE-Bag",
                     imgtechs:
                     {
-                        img1: "../../src/imgs/R (1).png",
-                        img2: "../../src/imgs/pinia.png",
-                        img3: "../../src/imgs/Tailwind_CSS_Logo.svg.png",
+                        img1: "R (1).png",
+                        img2: "pinia.png",
+                        img3: "Tailwind_CSS_Logo.svg.png",
                         
                     }
 
@@ -110,13 +112,13 @@ export default defineComponent({
 
                 },
                 {
-                    imgProject: "../../src/imgs/project3.png",
+                    imgProject: "/project3.png",
                     name: "Fin-Gadi",
                     imgtechs: {
-                        img1: "../../src/imgs/R (1).png",
-                        img2: "../../src/imgs/pinia.png",
-                        img3: "../../src/imgs/ts.png",
-                        img4: "../../src/imgs/Tailwind_CSS_Logo.svg.png",
+                        img1: "R (1).png",
+                        img2: "pinia.png",
+                        img3: "ts.png",
+                        img4: "Tailwind_CSS_Logo.svg.png",
 
                        
 
@@ -128,12 +130,12 @@ export default defineComponent({
 
                 },
                 {
-                    imgProject: "../../src/imgs/project4.png",
+                    imgProject: "project4.png",
                     name: "City-GYM",
                     imgtechs:
                     {
-                        img1: "../../src/imgs/R (1).png",
-                        img4: "../../src/imgs/Tailwind_CSS_Logo.svg.png"
+                        img1: "R (1).png",
+                        img4: "Tailwind_CSS_Logo.svg.png"
                     }
 
 
