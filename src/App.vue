@@ -19,7 +19,7 @@
         <section ref="Portfolio" class="container md:h-screen w-full py-16">
             <Portfolio></Portfolio>
         </section>
-        <section ref="Contact" class="container md:h-screen w-full py-16">
+        <section ref="Contact" class="container md:h-screen w-full py-18">
             <Contact></Contact>
         </section>
         <section class="h-full border-t-2 border-fuchsia-600 w-full py-10 mt-4">
